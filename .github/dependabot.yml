@@ -5,8 +5,10 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "/" # Location of package manifests
+  - package-ecosystem: "npm" # Set to your project's package manager
+    directory: "/" # Set to the directory where your package.json is located
     schedule:
-      interval: "weekly"
-      
+      interval: "weekly" # Change to your preferred update frequency
+    ignore:
+      - dependency-name: "express" # Example: ignore express package
+        versions: ["4.0.0"] # Example: ignore specific version
